@@ -15,6 +15,8 @@
 
  */
 
+#include <Ardurail.h>
+
 #define LOCO		18		// Locoaddress 
 //#define PROTOCOL	M1		// Maerklin-Motorola I
 #define PROTOCOL	M2		// Maerklin-Motorola II
