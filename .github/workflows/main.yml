@@ -22,17 +22,15 @@ jobs:
 
       - name: Build PlatformIO Project
         run: |
-          cd examples/ArdurailSRCPSerial
+          cp examples/ArdurailSRCPSerial/ArdurailSRCPSerial.ino .
           pio run
 
       - name: Copy all firmwares for for packaging
         run: |
           mkdir downloads
-          cd .pio/build
           find . -name '*.bin' | cpio -pdm ../../downloads
           find . -name '*.hex' | cpio -pdm ../../downloads
           find . -name '*.uf2' | cpio -pdm ../../downloads
-          cd ../..
 
       - name: Package and upload all firmwares for download
         uses: actions/upload-artifact@v3
