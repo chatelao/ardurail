@@ -20,11 +20,10 @@ jobs:
       - name: Install PlatformIO Core
         run: pip install --upgrade platformio
 
-      - name: Use sample "config.example.h" for compilations
-        run: mv $GITHUB_WORKSPACE/config.example.h $GITHUB_WORKSPACE/config.h
-
       - name: Build PlatformIO Project
-        run: pio run
+        run: |
+          cd examples/Ardurail
+          pio run
 
       - name: Copy all firmwares for for packaging
         run: |
