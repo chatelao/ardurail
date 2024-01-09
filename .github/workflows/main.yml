@@ -22,7 +22,7 @@ jobs:
 
       - name: Build PlatformIO Project
         run: |
-          cd examples/Ardurail
+          cd examples/ArdurailSRCPSerial
           pio run
 
       - name: Copy all firmwares for for packaging
