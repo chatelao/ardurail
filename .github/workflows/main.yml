@@ -43,7 +43,13 @@ jobs:
           cd examples/ESU_Decoder_programming
           cp ../../*.* .
           pio run
-          
+ 
+      - name: Build ESU_Decoder_programming.ino with PlatformIO
+        run: |
+          cd examples/Ardurail
+          cp ../../*.* .
+          pio run
+
       - name: Copy all firmwares for for packaging
         run: |
           mkdir downloads
