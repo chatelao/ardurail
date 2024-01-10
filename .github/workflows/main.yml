@@ -20,12 +20,30 @@ jobs:
       - name: Install PlatformIO Core
         run: pip install --upgrade platformio
 
-      - name: Build PlatformIO Project
+      - name: Build ArdurailSRCPSerial with PlatformIO
         run: |
           cd examples/ArdurailSRCPSerial
           cp ../../*.* .
           pio run
 
+      - name: Build Central with PlatformIO
+        run: |
+          cd examples/Central
+          cp ../../*.* .
+          pio run
+
+      - name: Build P50X_Central.ino with PlatformIO
+        run: |
+          cd examples/P50X_Central
+          cp ../../*.* .
+          pio run
+
+      - name: Build ESU_Decoder_programming.ino with PlatformIO
+        run: |
+          cd examples/ESU_Decoder_programming
+          cp ../../*.* .
+          pio run
+          
       - name: Copy all firmwares for for packaging
         run: |
           mkdir downloads
