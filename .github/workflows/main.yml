@@ -22,7 +22,8 @@ jobs:
 
       - name: Build PlatformIO Project
         run: |
-          cp examples/ArdurailSRCPSerial/ArdurailSRCPSerial.ino .
+          cd examples/ArdurailSRCPSerial/ArdurailSRCPSerial.ino
+          cp ../../*.* .
           pio run
 
       - name: Copy all firmwares for for packaging
