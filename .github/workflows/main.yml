@@ -22,7 +22,7 @@ jobs:
 
       - name: Build PlatformIO Project
         run: |
-          cd examples/ArdurailSRCPSerial/ArdurailSRCPSerial.ino
+          cd examples/ArdurailSRCPSerial
           cp ../../*.* .
           pio run
 
